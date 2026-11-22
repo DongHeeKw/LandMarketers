@@ -18,3 +18,7 @@ Precompute static area-level aggregated tiles, gzip/brotli, spatial RTree/GiST; 
 
 ## Regulatory review
 Real estate brokerage/commissions and ad disclosures require counsel and licensed entity where applicable. Do not build payment/escrow, offer matching or owner-contact relay until reviewed.
+
+
+## Mandatory mobile-first architecture override (2026-11-22)
+This repository is an independent app, not one module of a combined public-data super-app. Before implementing UI, follow [Mobile-first Information Architecture](25_MOBILE_FIRST_INFORMATION_ARCHITECTURE.md). Existing multi-panel screenshots are **desktop design references**. Mobile uses separate decision steps, tablet may use split pane, desktop may use dashboard. Route state must persist across steps. All business rules remain UI-independent. Tests must validate responsive navigation, back/refresh state, and 2D/no-WebGL fallback where Three.js is used.
